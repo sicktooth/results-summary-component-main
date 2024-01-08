@@ -62,6 +62,7 @@ h2 {
     position: relative;
     right: 10px;
     text-align: initial;
+    display: grid;
 }
 .item {
     padding: 10px;
@@ -97,9 +98,34 @@ h2 {
 .item:nth-of-type(4) span:nth-of-type(1) {
     color: hsl(234, 92%, 29%);
 }
-/* button {
-    padding: 20px;
-} */
+button {
+    padding: 14px;
+    color: #ffffff;
+    background-color: hsl(235deg 42% 16.63%);
+    border-radius: 32px;
+    border: hsl(235deg 42% 16.63%);
+    justify-self: stretch;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-top: 12px;
+}
+button:hover {
+    background-color: hsl(241, 81%, 54%);
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 375px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .firstPart { 
+        border-radius: 0 0 5% 5%;
+    }
+    .secondPart {
+        right: 0;
+    }
+}
